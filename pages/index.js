@@ -1,14 +1,8 @@
 import Link from "next/link";
 
-import { ImmortalDB } from "immortal-db";
-var db = new ImmortalDB({
-  storage: ["IndexedDB", "LocalStorage", "SessionStorage"]
-});
-ImmortalDB.set("hi", "bonjour");
-console.log(ImmortalDB.get("hi"));
 export default () => (
   <div>
-    <h1>Salinity & Hydration {countPlusOne}</h1>
+    <h1>Salinity & Hydration {process.env.customKey}</h1>
     <p>
       This is a living document that will showcase the development cycle of a
       salt water aquarium.
